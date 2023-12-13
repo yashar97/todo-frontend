@@ -22,7 +22,7 @@ const Login = () => {
 
         try {
 
-            const { data } = await axios.post('http://localhost:8080/api/usuarios/login', { email, password }, {
+            const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/usuarios/login`, { email, password }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

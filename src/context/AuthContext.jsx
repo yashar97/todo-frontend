@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
         const autenticarUsuario = async () => {
 
             const token = localStorage.getItem('token');
-            const url = 'http://localhost:8080/api/usuarios/perfil';
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/usuarios/perfil`;
 
             if (!token) {
                 setCargado(true);

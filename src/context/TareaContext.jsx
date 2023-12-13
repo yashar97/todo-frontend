@@ -19,7 +19,7 @@ const TareaProvider = ({ children }) => {
         const obtenerTareas = async () => {
 
             const token = localStorage.getItem('token');
-            const url = 'http://localhost:8080/api/tareas';
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/tareas`;
 
             if (!token) {
                 return;
@@ -47,7 +47,7 @@ const TareaProvider = ({ children }) => {
 
     const agregarTarea = async tarea => {
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:8080/api/tareas';
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/tareas`;
 
         const nuevaTarea = { tarea };
 
@@ -73,7 +73,7 @@ const TareaProvider = ({ children }) => {
     const eliminarTarea = async id => {
 
         const token = localStorage.getItem('token');
-        const url = `http://localhost:8080/api/tareas/${id}`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/tareas/${id}`
 
         try {
 

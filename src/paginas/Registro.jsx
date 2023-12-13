@@ -19,7 +19,7 @@ const Registro = () => {
 
         try {
 
-            const { data } = await axios.post('http://localhost:8080/api/usuarios/registro', { nombre, email, password }, {
+            const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/usuarios/registro`, { nombre, email, password }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
