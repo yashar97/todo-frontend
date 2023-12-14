@@ -22,18 +22,21 @@ const Login = () => {
 
         try {
 
+           
+
             const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/usuarios/login`, { email, password }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-
-            setAuth(data);
+            
             localStorage.setItem('token', data.token);
+            setAuth(data);
             navigate('/inicio');
 
 
         } catch (error) {
+            console.log(error)
             toast.error(error.response.data.msg);
         }
 
