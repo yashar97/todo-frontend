@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <header className="bg-dark text-white text-center py-4">
-            <h1 className="h3">ToDo List</h1>
+            <h1 className="h3">To Do List</h1>
             {/* Puedes agregar enlaces de navegación aquí */}
             <Link onClick={cerrarSesion} to='/'>Salir</Link>
         </header>
