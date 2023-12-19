@@ -13,7 +13,7 @@ const FormularioTarea = () => {
         e.preventDefault();
 
         if (nombreTarea === '') {
-            toast('No puede ir vacío');
+            toast.warn('No puede ir vacío');
             return;
         }
 
