@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useTareas from "../hooks/useTareas";
+import { toast } from "react-toastify";
 
 
 const FormularioTarea = () => {
@@ -10,6 +11,11 @@ const FormularioTarea = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+
+        if (nombreTarea === '') {
+            toast('No puede ir vacío');
+            return;
+        }
 
         agregarTarea(nombreTarea);
         setNombreTarea('')
