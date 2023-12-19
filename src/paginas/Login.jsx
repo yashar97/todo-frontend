@@ -48,7 +48,7 @@ const Login = () => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card">
-                        <div className="card-header bg-primary text-white text-center">
+                        <div className="card-header bg-success text-white text-center">
                             <h3 className="h4">Iniciar Sesión</h3>
                         </div>
                         <div className="card-body">
